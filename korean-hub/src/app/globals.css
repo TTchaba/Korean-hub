@@ -1,0 +1,75 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  :root {
+    color-scheme: light;
+    --font-display: "Georgia", "Times New Roman";
+    --font-sans: Arial, "Malgun Gothic", sans-serif;
+  }
+
+  * {
+    @apply border-ink/10;
+  }
+
+  html {
+    scroll-behavior: smooth;
+  }
+
+  body {
+    @apply bg-porcelain text-ink font-sans antialiased;
+  }
+
+  h1, h2, h3, h4 {
+    @apply font-display text-ink;
+  }
+
+  a, button {
+    @apply outline-none transition-transform duration-100 active:scale-[0.98];
+  }
+
+  a:focus-visible,
+  button:focus-visible,
+  input:focus-visible,
+  textarea:focus-visible,
+  select:focus-visible,
+  [tabindex]:focus-visible {
+    @apply ring-2 ring-celadon-600 ring-offset-2 ring-offset-porcelain;
+  }
+
+  ::selection {
+    background-color: theme("colors.celadon.300");
+    color: theme("colors.ink.DEFAULT");
+  }
+}
+
+@layer utilities {
+  .container-hub {
+    @apply mx-auto w-full max-w-6xl px-6 sm:px-8 lg:px-10;
+  }
+
+  .brush-divider {
+    background-image: linear-gradient(
+      to right,
+      transparent,
+      theme("colors.ochre.400") 20%,
+      theme("colors.ochre.400") 80%,
+      transparent
+    );
+    height: 1px;
+  }
+}
+
+/* Respect reduced-motion preferences. The Framer Motion animations check this
+   themselves (useReducedMotion); this rule covers plain CSS transitions. */
+@media (prefers-reduced-motion: reduce) {
+  *,
+  *::before,
+  *::after {
+    animation-duration: 0.001ms !important;
+    animation-iteration-count: 1 !important;
+    transition-duration: 0.001ms !important;
+    scroll-behavior: auto !important;
+  }
+}

@@ -1,0 +1,24 @@
+# dependencies
+node_modules/
+
+# next.js
+.next/
+out/
+
+# production
+build/
+
+# env files (never commit real secrets)
+.env
+.env.local
+.env.production
+
+# firebase
+.firebase/
+firebase-debug.log
+serviceAccountKey.json
+
+# misc
+.DS_Store
+*.pem
+npm-debug.log*
