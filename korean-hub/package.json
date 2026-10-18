@@ -4,8 +4,8 @@
   "private": true,
   "description": "Korean Hub \u2014 online Korean language learning studio.",
   "scripts": {
-    "dev": "next dev",
-    "build": "next build",
+    "dev": "vite",
+    "build": "tsc -b && vite build",
     "start": "next start",
     "lint": "next lint",
     "typecheck": "tsc --noEmit"
