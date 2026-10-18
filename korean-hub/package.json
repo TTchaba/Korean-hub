@@ -4,12 +4,12 @@
   "private": true,
   "description": "Korean Hub \u2014 online Korean language learning studio.",
   "scripts": {
-    "dev": "vite",
-    "build": "tsc -b && vite build",
-    "start": "next start",
-    "lint": "next lint",
-    "typecheck": "tsc --noEmit"
-  },
+  "dev": "next dev",
+  "build": "next build",
+  "start": "next start",
+  "lint": "next lint",
+  "typecheck": "tsc --noEmit"
+},
   "dependencies": {
     "next": "14.2.15",
     "react": "18.3.1",
