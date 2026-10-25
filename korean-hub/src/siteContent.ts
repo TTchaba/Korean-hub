@@ -35,7 +35,7 @@ export const siteContent = {
 
   navigation: {
     links: [
-      { href: "/", label: "Home" },
+      { href: "/", label: "მთავარი" },
       { href: "/lessons", label: "Lessons" },
       { href: "/teacher", label: "Teacher" },
       { href: "/for-students", label: "For Students" },
